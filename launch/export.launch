@@ -1,0 +1,7 @@
+<launch>
+   <!-- <node pkg="rosbag" type="play" name="test" args="-d 2 $(find export_img)/bag/2019-12-04-19-08-06.bag"/> -->
+   <node name="extract" pkg="image_view" type="extract_images" respawn="false" output="screen">
+     <!-- <remap from="image" to="/photoneo_center/rgb_texture"/> -->
+    <remap from="image" to="/photoneo_center/rgb_texture"/>
+   </node>
+</launch>
